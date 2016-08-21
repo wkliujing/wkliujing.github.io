@@ -1,0 +1,790 @@
+/**
+ * 全局基础样式，主要包含：
+ * 1. 样式重置
+ * 2. 基础布局相关样式
+ */
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+iframe,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+button,
+input,
+textarea,
+th,
+td,
+fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol,
+dl {
+	list-style-type: none;
+}
+
+html,
+body {
+	*position: static;
+	height: 100%;
+}
+
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+input,
+button {
+	overflow: visible;
+	vertical-align: middle;
+	outline: none;
+}
+
+body,
+th,
+td,
+button,
+input,
+select,
+textarea {
+	font-family: "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, Verdana, sans-serif, "WenQuanYi Micro Hei", "\5B8B\4F53";
+	/*font-family: Verdana, 'Microsoft YaHei', Arial, Helvetica, sans-serif;*/
+	font-size: 12px;
+	color: #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+
+body {
+	line-height: 1.1;
+	background-color: #fff;
+	/*overflow-x: hidden;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	color: #333;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+a,
+area {
+	outline: none;
+	blr: expression(this.onFocus=this.blur());
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #666;
+}
+
+a:hover {
+	text-decoration: none;
+	outline: none;
+}
+
+a.ie6:hover {
+	zoom: 1;
+}
+
+a:focus {
+	outline: none;
+}
+
+a:hover,
+a:active {
+	outline: none;
+}
+
+:focus {
+	outline: none;
+}
+
+sub,
+sup {
+	vertical-align: baseline;
+}
+
+
+/*img*/
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+a img,
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+
+/*IE下a:hover 背景闪烁*/
+
+html {
+	overflow: -moz-scrollbars-vertical;
+	/*zoom:expression(function(ele) {
+        ele.style.zoom="1";
+        document.execCommand("BackgroundImageCache", false, true)
+    }
+    (this));*/
+}
+
+
+/*HTML5 reset*/
+
+header,
+footer,
+section,
+aside,
+details,
+menu,
+article,
+section,
+nav,
+address,
+hgroup,
+figure,
+figcaption,
+legend {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+time {
+	display: inline;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+audio:not([controls]) {
+	display: none;
+}
+
+legend {
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 21px;
+	line-height: 40px;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+legend small {
+	font-size: 15px;
+	color: #999;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+fieldset {
+	border-width: 0;
+	padding: 0.35em 0.625em 0.75em;
+	margin: 0 2px;
+	border: 1px solid #c0c0c0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	/* 2 */
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+
+/*IE11 输入框后面多余的叉叉*/
+
+input::-ms-clear {
+	display: none;
+}
+
+table {
+	width: 100%;
+	empty-cells: show;
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table th,
+table td {
+	padding: 0;
+}
+
+.cl:after,
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.cl,
+.clearfix {
+	zoom: 1;
+	/*    _overflow: hidden;
+    _clear: both;*/
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+
+/*以下开始为常用样式*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+	line-height: 1.1;
+	/*color: inherit;*/
+}
+
+
+/*重要的文本，加粗*/
+
+em {
+	font-style: italic;
+}
+
+
+/*被强调的文本*/
+
+i {}
+
+
+/*斜体*/
+
+u {}
+
+
+/*加下划线*/
+
+cite {
+	font-style: normal;
+}
+
+
+/*引用*/
+
+mark {
+	color: #000;
+	background: #ff0;
+}
+
+var {}
+
+kbd {}
+
+code {}
+
+dfn {
+	font-style: italic;
+}
+
+del {
+	font-family: Simsun;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, serif;
+	font-size: 1em;
+}
+
+pre {
+	display: block;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	padding: 9.5px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	line-height: 20px;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	color: #333
+}
+
+abbr[title],
+abbr[data-original-title] {
+	cursor: help;
+	border-bottom: 1px dotted #999
+}
+
+abbr.initialism {
+	font-size: 90%;
+	text-transform: uppercase
+}
+
+
+/*3.1.18 地址
+  Example:    <address>北京市海淀区上地……</address>
+  Explain:    
+*/
+
+address {
+	display: block;
+	margin-bottom: 20px;
+	font-style: normal;
+	line-height: 20px
+}
+
+
+/*3.1.19 引用
+  Example:    <blockquote>这是引用的内容</blockquote>
+  Explain:    
+*/
+
+blockquote {
+	padding: 0 0 0 15px;
+	margin: 0 0 20px;
+	border-left: 5px solid #eee
+}
+
+blockquote p {
+	margin-bottom: 0;
+	font-size: 17.5px;
+	font-weight: 300;
+	line-height: 1.25
+}
+
+blockquote small {
+	display: block;
+	line-height: 20px;
+	color: #999
+}
+
+blockquote small:before {
+	content: '\2014 \00A0'
+}
+
+blockquote.text-r {
+	padding-right: 15px;
+	padding-left: 0;
+	border-right: 5px solid #eee;
+	border-left: 0
+}
+
+blockquote.text-r p,
+blockquote.text-r small {
+	text-align: right
+}
+
+blockquote.text-r small:before {
+	content: ''
+}
+
+blockquote.text-r small:after {
+	content: '\00A0 \2014'
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+	content: ""
+}
+
+q {
+	/*短的引用*/
+	quotes: "\201C" "\201D" "\2018" "\2019"
+}
+
+
+/*3.1.20 上标，下标
+  Example:    <sup>2</sup>  <sub>2<sub>
+  Explain:    上标|下标
+*/
+
+sub,
+sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #c9c9c9;
+}
+
+:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #c9c9c9;
+}
+
+::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #c9c9c9;
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #c9c9c9;
+}
+
+
+/*通用表单输入 placeholder支持*/
+
+.common-input::-moz-placeholder {
+	color: #c9c9c9;
+	opacity: 1;
+}
+
+.common-input:-ms-input-placeholder {
+	color: #c9c9c9;
+}
+
+.common-input::-webkit-input-placeholder {
+	color: #c9c9c9;
+}
+
+
+/*IE6-9 placeholder支持*/
+
+.placeholder,
+.common-input.placeholder {
+	color: #c9c9c9;
+}
+
+
+/*补充样式开始*/
+
+.hide {
+	display: none;
+}
+
+[hidden] {
+	display: none;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+.f-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+.show {
+	display: block;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+
+/*预格式化的文本*/
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+/*文字大写*/
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+
+/*文字小写*/
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.en {
+	font-family: Arial;
+}
+
+ul.unstyled,
+ol.unstyled {
+	margin-left: 0;
+	list-style: none;
+}
+
+ul.inline,
+ol.inline {
+	margin-left: 0;
+	list-style: none;
+}
+
+ul.inline>li,
+ol.inline>li {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1
+}
+
+.dis-ib {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1
+}
+
+.text-l {
+	text-align: left;
+}
+
+.text-r {
+	text-align: right;
+}
+
+.text-c {
+	text-align: center;
+}
+
+.va * {
+	vertical-align: sub;
+	*vertical-align: middle;
+	_vertical-align: middle;
+}
+
+.va-t {
+	vertical-align: top;
+}
+
+.va-m {
+	vertical-align: middle;
+}
+
+.va-b {
+	vertical-align: bottom;
+}
+
+.va-m-assistant {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 0;
+	height: 100%;
+	vertical-align: middle;
+}
+
+
+/*3.1.4 定位
+  Name:     style_position
+  Example:    class="pos-r|pos-a|pos-f"
+  Explain:    .pos-r 相对定位|.pos-a 绝对定位|.pos-f 固定
+*/
+
+.pos-r {
+	position: relative;
+}
+
+.pos-a {
+	position: absolute;
+}
+
+.pos-f {
+	position: fixed;
+}
+
+.l,
+.f-l {
+	float: left;
+	/*用于处理IE6下浮动 文字自动换行的BUG*/
+	_display: inline;
+}
+
+.r,
+.f-r {
+	float: right;
+	/*用于处理IE6下浮动 文字自动换行的BUG*/
+	_display: inline;
+}
+
+[class*="span"].r,
+[class*="span"].f-r {
+	float: right;
+}
+
+
+/*控制元素对定位的位置：居左|居右|j居上|居下*/
+
+.left {
+	left: 0;
+	right: auto;
+}
+
+.right {
+	right: 0;
+	left: auto;
+}
+
+.top {
+	top: auto;
+	bottom: 0;
+}
+
+.bottom {
+	top: 0;
+	bottom: auto;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-overflow {
+	/*超出不显示*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*不换行才可能显示出...*/
+	white-space: nowrap;
+	word-break: normal;
+}
+
+.line {
+	font-size: 0px;
+	line-height: 0px;
+	border-top: solid 1px #eee;
+	float: none;
+}
+
+.radius {
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.circle {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.pipe {
+	margin: 0 5px;
+	color: #CCC;
+	font-size: 10px;
+}
+
+.indent {
+	text-indent: 2em;
+}
+
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+ .inner4 {
+  display: block; float:right;
+  width: 92px;
+  height: 22px;
+  background-image: url(http://domshow.vhostgo.com/template/img/contact-qq.png);
+}
+
+/*说明： .horizontal-center 样式位于header_footer.css中*/
+
+
+
+
